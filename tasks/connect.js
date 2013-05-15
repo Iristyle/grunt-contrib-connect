@@ -75,7 +75,7 @@ module.exports = function(grunt) {
         ca: options.ca || grunt.file.read(path.join(__dirname, 'certs', 'ca.crt')).toString(),
         passphrase: options.passphrase || 'grunt',
       };
-      serverOpts = [httpsOpts, app.listen];
+      serverOpts = [httpsOpts, app];
     }
 
     var server = require(options.protocol)
